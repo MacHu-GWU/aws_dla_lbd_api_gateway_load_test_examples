@@ -189,10 +189,11 @@ AWS Chalice Microservice framework for Python:
 - ``/.chalice/deployments/``:
 
 
-
-
-
-"An error occurred (AuthFailure) when calling the DescribeInstances operation: AWS was not able to validate the provided access credentials"
-
-
-
+What we Learned?
+------------------------------------------------------------------------------
+1. Cloud9, the AWS native, collaborative development environment.
+2. Python project skeleton minimal viable example.
+3. AWS Lambda best practice, development, testing, deployment strategy.
+4. Chalices Microservices Framework.
+5. API Gateway integration with AWS Lambda to power your microservices.
+6. Load testing best practice.
