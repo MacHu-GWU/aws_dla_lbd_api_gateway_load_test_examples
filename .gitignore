@@ -1,0 +1,26 @@
+# python library metadata
+*.egg-info/
+
+# virtualenv
+venv/
+
+# chalice deployment
+vendor/
+
+# temp build file
+build/
+
+# compiled bytes code cache
+__pycache__/
+
+# pytest cache
+.pytest_cache/
+
+# git meta files
+.git/
+
+# PyCharm project
+.idea/
+
+# Temp folder
+tmp/
