@@ -1,1 +1,5 @@
 pytest
+requests
+locust
+rich
+

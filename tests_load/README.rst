@@ -1,6 +1,8 @@
-Single machine, 1000+ concurrent request load test. Powered by Locust, a high performance Python load test framework.
+Load Test
+==============================================================================
+This folder include a single machine, 1000+ concurrent request load test, powered by Locust, a high performance Python load test framework.
 
-Run load test in CLI:
+**Run load test in CLI**:
 
 .. code-block:: bash
 
@@ -13,3 +15,18 @@ Explain:
 - ``--users``: number of users you want to simulate
 - ``--spawn-rate``: spawn n users per sec
 - ``--stop-timeout``: when hit Ctrl + C to stop, give those on-the-fly request sometime to finish
+
+
+Concepts
+------------------------------------------------------------------------------
+- ``coroutine``: the backbone of high concurrent. single thread, single core, but high concurrent, non-block, async, event driven.
+- ``User``: represent a user
+- ``task``: user's action
+- ``request_meta``: metadata about the request / response
+- ``event listener``: main Locust event
+- ``client``
+
+
+Reference
+------------------------------------------------------------------------------
+- Locust: https://locust.io/

@@ -1,6 +1,5 @@
 AWS Lambda + API Gateway + Load Test Examples
 ==============================================================================
-
 .. contents::
     :class: this-will-duplicate-information-and-it-is-still-useful-here
     :depth: 1
@@ -9,12 +8,11 @@ AWS Lambda + API Gateway + Load Test Examples
 
 Overview
 ------------------------------------------------------------------------------
-In this tutorial, I will cover how to set up a development environment in a few clicks using AWS Cloud 9 the AWS Native IDE. So you can develop from anywhere using any OS with just a web browser. Also I will cover the best practice to develop, test, deploy lambda function using Chalice, the AWS Lambda Microservice framework for Python. It allow you to focus on your application code rather than any DevOps scripts. In addition, a load testing strategy is covered.
+In this tutorial, I will cover how to set up a development environment in a few clicks using AWS Cloud 9 the AWS Native IDE. So you can develop from anywhere using any OS with just a web browser. Also I will cover the best practice to develop, test, deploy lambda function powered Rest API using Chalice, the AWS Lambda Microservice framework for Python. It allow you to focus on your application code rather than any DevOps scripts. In addition, I will walk through a load testing strategy that simulate thousands of concurrent request to test our API..
 
 
 Set up Development Environment
 ------------------------------------------------------------------------------
-
 .. contents::
     :class: this-will-duplicate-information-and-it-is-still-useful-here
     :depth: 1
@@ -51,7 +49,6 @@ Reference:
 
 AWS Lambda Development
 ------------------------------------------------------------------------------
-
 .. contents::
     :class: this-will-duplicate-information-and-it-is-still-useful-here
     :depth: 1
@@ -174,11 +171,20 @@ Python Library:
 - ``/setup.py``:
 - ``/app.py``:
 
+Python virtualenv
+
+- ``/venv/``
+
 Python Unit test:
 
 - ``/tests/all.py``:
 - ``/tests/test_import.py``:
 - ``/tests/test_lbd_hello.py``:
+
+Integration test and load test:
+
+- ``/tests_int/``
+- ``/tests_all/``
 
 AWS Chalice Microservice framework for Python:
 
