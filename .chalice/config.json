@@ -13,7 +13,11 @@
                     "lambda_memory_size": 256,
                     "lambda_timeout": 10
                 },
-                "increment": {
+                "index": {
+                    "lambda_memory_size": 256,
+                    "lambda_timeout": 10
+                },
+                "incr": {
                     "lambda_memory_size": 256,
                     "lambda_timeout": 10
                 }

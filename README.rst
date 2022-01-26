@@ -1,4 +1,4 @@
-AWS Lambda Development Examples
+AWS Lambda + API Gateway + Load Test Examples
 ==============================================================================
 
 .. contents::
@@ -9,7 +9,7 @@ AWS Lambda Development Examples
 
 Overview
 ------------------------------------------------------------------------------
-In this tutorial, I will cover how to set up a development environment in a few clicks using AWS Cloud 9 the AWS Native IDE. So you can develop from anywhere using any OS with just a web browser. Also I will cover the best practice to develop, test, deploy lambda function using Chalice, the AWS Lambda Microservice framework for Python. It allow you to focus on your application code rather than any DevOps scripts.
+In this tutorial, I will cover how to set up a development environment in a few clicks using AWS Cloud 9 the AWS Native IDE. So you can develop from anywhere using any OS with just a web browser. Also I will cover the best practice to develop, test, deploy lambda function using Chalice, the AWS Lambda Microservice framework for Python. It allow you to focus on your application code rather than any DevOps scripts. In addition, a load testing strategy is covered.
 
 
 Set up Development Environment
@@ -35,7 +35,6 @@ Create Cloud 9 Environment
 
 Use Cloud 9 IDE
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 Things to know:
 
 - Top main menu
