@@ -3,7 +3,7 @@
 import json
 import requests
 
-endpoint = "https://tu562r0v73.execute-api.us-east-1.amazonaws.com/api"
+endpoint = "https://k2pae9du94.execute-api.us-east-1.amazonaws.com/api"
 
 headers = {
     "Authorization": "allow",

@@ -4,7 +4,7 @@ import json
 from locust import HttpUser, task, constant
 
 # make sure it ends with /
-api_gateway_endpoint = "https://tu562r0v73.execute-api.us-east-1.amazonaws.com/api/"
+api_gateway_endpoint = "https://k2pae9du94.execute-api.us-east-1.amazonaws.com/api/"
 
 # HTTP header for authentication and other purpose
 headers = {
@@ -29,4 +29,4 @@ class SlowUser(HttpUser):
             headers=headers,
             data=json.dumps({"key": "test"}),
         )
-        print(response.text)
+        # print(response.text)

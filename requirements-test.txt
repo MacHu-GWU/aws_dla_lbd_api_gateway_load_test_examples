@@ -1,5 +1,6 @@
-pytest
-requests
+pytest                                  # test framework
+pytest-cov                              # coverage test
+requests                                
 locust
 rich
 

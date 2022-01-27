@@ -122,7 +122,9 @@ Prepare Python Development Environment
 
 .. code-block:: bash
 
-    pip install -r requirements-test.txt
+    bash ./bin/test.sh
+    
+6. Run code coverage test.
 
 Define Custom Runner, run python script in virtualenv.
 

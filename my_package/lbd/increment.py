@@ -32,9 +32,11 @@ def low_level_api(key: str):
                 KeyValueCount.count.set(KeyValueCount.count + 1)
             ]
         )
-    except:
+    except KeyValueCount.DoesNotExist:
         item.count = 1
         item.save()
+    except Exception as e:
+        return {"message": "error: {}".format(e)}
     return {"message": "success"}
 
 

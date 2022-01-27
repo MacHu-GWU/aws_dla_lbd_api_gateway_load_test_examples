@@ -5,7 +5,7 @@ from my_package.lbd.increment import low_level_api, KeyValueCount
 
 
 def test_low_level_api():
-    key = "test"
+    key = "unittest"
     item = KeyValueCount(key=key, count=0)
     item.save()
 

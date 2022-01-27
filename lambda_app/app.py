@@ -11,6 +11,11 @@ app = Chalice(app_name="my_load_test_app")
 @app.lambda_function(name="hello")
 def handler_hello(event, context):
     return hello.handler(event, context)
+    
+
+@app.lambda_function(name="increment")
+def handler_increment(event, context):
+    return increment.handler(event, None)
 
 
 @app.authorizer()
@@ -52,7 +57,7 @@ def index():
     name="incr",
     authorizer=demo_auth,
 )
-def handler_increment():
+def incr():
     # expect {"key": "some_key"}
     event = app.current_request.json_body
     response = increment.handler(event, None)
