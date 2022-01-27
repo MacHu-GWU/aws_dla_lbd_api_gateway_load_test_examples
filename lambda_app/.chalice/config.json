@@ -3,7 +3,7 @@
     "app_name": "my_load_test_app",
     "stages": {
         "dev": {
-            "iam_role_arn": "arn:aws:iam::669508176277:role/sanhe-lambda-admin-access",
+            "iam_role_arn": "arn:aws:iam::669508176277:role/sanhe-lambda-api-gateway-load-test-examples",
             "manage_iam_role": false,
             "layers": [
                 "arn:aws:lambda:us-east-1:669508176277:layer:my_package:2"

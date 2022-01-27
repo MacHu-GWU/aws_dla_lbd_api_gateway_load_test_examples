@@ -202,3 +202,11 @@ What we Learned?
 4. Chalices Microservices Framework.
 5. API Gateway integration with AWS Lambda to power your microservices.
 6. Load testing best practice.
+
+
+
+An error occurred (AccessDeniedException) when calling the CreateFunction
+operation: User: arn:aws:iam::871070586944:user/ER_buildlab is not authorized
+to perform: iam:PassRole on resource:
+arn:aws:iam::871070586944:role/er_buildlab_lambda because no identity-based
+policy allows the iam:PassRole action
