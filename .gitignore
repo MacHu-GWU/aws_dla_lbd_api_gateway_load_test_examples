@@ -18,7 +18,6 @@ __pycache__/
 .coverage.annotate/
 .coverage
 
-
 # git meta files
 .git/
 
@@ -27,3 +26,6 @@ __pycache__/
 
 # Temp folder
 tmp/
+
+# MacOS
+.DS_Store
