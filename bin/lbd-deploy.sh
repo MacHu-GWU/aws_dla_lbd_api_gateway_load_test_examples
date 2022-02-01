@@ -7,5 +7,5 @@ dir_lambda_app="${dir_project_root}/lambda_app"
 
 rm -r "${dir_lambda_app}/vendor"
 mkdir -p "${dir_lambda_app}/vendor"
-${dir_venv_bin}/pip install --no-deps --target "${dir_lambda_app}/vendor" .
+${dir_venv_bin}/pip install --no-deps --target "${dir_lambda_app}/vendor" "${dir_project_root}"
 ${dir_venv_bin}/chalice --project-dir "${dir_lambda_app}" deploy
