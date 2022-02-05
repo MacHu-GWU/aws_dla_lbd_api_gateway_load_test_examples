@@ -1,28 +1,22 @@
 #!/bin/bash
+# Build AWS Lambda layer in Amazon Linux docker container
 
 dir_here="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 dir_project_root="$(dirname "${dir_here}")"
-dir_venv_bin="${dir_project_root}/venv/bin"
 
 #---- change these config variables accordingly ---
-app_name="my_package"
-compatible_runtime="python3.7"
-lbd_deploy_bucket="aws-data-lab-sanhe-for-everything"
+app_name="aws_lambda_salesforce_objects"
+compatible_runtime="python3.8"
+lbd_deploy_bucket="sandbox-userhome"
 #--------------------------------------------------
 
 # clean up existing build files
 rm -r "${dir_project_root}/build/lambda/python"
 mkdir -p "${dir_project_root}/build/lambda/python"
-
-# install dependencies to build dir
-${dir_venv_bin}/pip install -t "${dir_project_root}/build/lambda/python" -r "${dir_project_root}/requirements.txt"
-
-# clean up existing layer file
 rm -r "${dir_project_root}/build/lambda/layer.zip"
-cd "${dir_project_root}/build/lambda"
 
-# zip the layer file
-zip "${dir_project_root}/build/lambda/layer.zip" * -r -9 -q -x python/boto3\* python/botocore\* python/s3transfer\* python/setuptools\* python/pip\* python/wheel\* python/twine\* python/_pytest\* python/pytest\*;
+# build layer in Amazon Linux docker container
+docker run -v "${dir_project_root}:/var/task" --rm lambci/lambda:build-python3.8 bash "/var/task/bin/container-only-build-lambda-layer.sh"
 
 # upload the layer file to AWS S3
 aws s3 cp "${dir_project_root}/build/lambda/layer.zip" "s3://${lbd_deploy_bucket}/lambda/artifacts/layer.zip"
