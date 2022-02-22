@@ -40,5 +40,5 @@ def low_level_api(key: str):
     return {"message": "success"}
 
 
-def handler(event, context):
+def handler(event, context):  # pragma: no cover
     return low_level_api(event["key"])
