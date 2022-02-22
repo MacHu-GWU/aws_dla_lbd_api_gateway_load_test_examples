@@ -45,6 +45,18 @@ The native of Cloud 9 environment is just a EC2 virtual machine in your AWS envi
 
 - Creating an EC2 Environment: https://docs.aws.amazon.com/cloud9/latest/user-guide/create-environment-main.html
 
+.. image:: ./images/cloud9-1.png
+
+.. image:: ./images/cloud9-2.png
+
+.. image:: ./images/cloud9-3.png
+
+.. image:: ./images/cloud9-4.png
+
+.. image:: ./images/cloud9-5.png
+
+.. image:: ./images/cloud9-6.png
+
 
 Use Cloud 9 IDE
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -57,6 +69,8 @@ Things to know:
 - Terminal: a local terminal with bash shell, you can use other shells too.
 - AWS Credential Management: manage the AWS access for your Cloud 9 VM.
 - Use EC2 instance Profile when using Cloud 9 in Private subnet: the AWS Managed credential won't work when Cloud 9 is on Private subnet. You should consider using EC2 instance profile.
+
+.. image:: ./images/cloud9-7.png
 
 Reference:
 
