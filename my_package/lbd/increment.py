@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
-
 from pynamodb.models import Model
 from pynamodb.attributes import UnicodeAttribute, NumberAttribute
 from pynamodb.models import PAY_PER_REQUEST_BILLING_MODE
+from pynamodb.exceptions import UpdateError
 
 
 # Define Dynamodb Table and Schema
@@ -32,7 +32,7 @@ def low_level_api(key: str):
                 KeyValueCount.count.set(KeyValueCount.count + 1)
             ]
         )
-    except KeyValueCount.DoesNotExist:
+    except UpdateError:
         item.count = 1
         item.save()
     except Exception as e:

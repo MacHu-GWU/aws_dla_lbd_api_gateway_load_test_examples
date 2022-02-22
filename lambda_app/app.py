@@ -1,21 +1,17 @@
 # -*- coding: utf-8 -*-
 
 from chalice import Chalice, AuthResponse
+from my_package import __chalice_app_name__
 from my_package.lbd import hello, increment
 
 # define a Chalice app
-app = Chalice(app_name="my_load_test_app")
+app = Chalice(app_name=__chalice_app_name__)
 
 
 # a pure native lambda function
 @app.lambda_function(name="hello")
 def handler_hello(event, context):
     return hello.handler(event, context)
-    
-
-@app.lambda_function(name="increment")
-def handler_increment(event, context):
-    return increment.handler(event, None)
 
 
 @app.authorizer()
@@ -62,3 +58,10 @@ def incr():
     event = app.current_request.json_body
     response = increment.handler(event, None)
     return response
+
+
+# even though we already have a rest API handler, we want to have a pure lambda
+# function version of it for testing without using API gateway
+@app.lambda_function(name="increment")
+def handler_increment(event, context):
+    return increment.handler(event, None)

@@ -5,7 +5,7 @@ import json
 from locust import task, FastHttpUser, constant
 
 # make sure it ends with /
-api_gateway_endpoint = "https://k2pae9du94.execute-api.us-east-1.amazonaws.com/api/"
+api_gateway_endpoint = "https://dpm3620drh.execute-api.us-east-1.amazonaws.com/api/"
 
 # HTTP header for authentication and other purpose
 headers = {
